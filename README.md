@@ -9,4 +9,4 @@ Unfunny guy: he made lua scripts and some shit
 
 Dokiazi: Source Code
 
-generic: Made danker character and funny song
+generic: Made danker character
