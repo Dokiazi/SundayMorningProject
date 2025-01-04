@@ -6,7 +6,7 @@
 
 - Unfunny guy **A very cool Guy That knows lua script**
 
-- Dokiazi **a guy that knows how to code on haxe and C++**
+- Dokiazi **a guy that knows how to code on haxe**
 
 <h3 align="left"></h3>
 <p align="left">
