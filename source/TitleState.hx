@@ -15,6 +15,29 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
+#if desktop
+import Discord.DiscordClient;
+import sys.thread.Thread;
+#end
+import haxe.Json;
+import openfl.display.Bitmap;
+import openfl.display.BitmapData;
+#if MODS_ALLOWED
+import sys.FileSystem;
+import sys.io.File;
+#end
+import options.GraphicsSettingsSubState;
+//import flixel.graphics.FlxGraphic;
+import flixel.graphics.frames.FlxAtlasFrames;
+import flixel.graphics.frames.FlxFrame;
+import flixel.group.FlxGroup;
+import flixel.input.gamepad.FlxGamepad;
+import flixel.math.FlxMath;
+import flixel.system.FlxSound;
+import flixel.system.ui.FlxSoundTray;
+import flixel.text.FlxText;
+import lime.app.Application;
+import openfl.Assets;
 
 class TitleState extends FlxTransitionableState
 {
