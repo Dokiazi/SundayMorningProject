@@ -17,6 +17,9 @@ import flixel.util.FlxTimer;
 
 class TitleState extends FlxTransitionableState
 {
+	public static var muteKeys:Array<FlxKey> = [FlxKey.ZERO];
+	public static var volumeDownKeys:Array<FlxKey> = [FlxKey.NUMPADMINUS, FlxKey.MINUS];
+	public static var volumeUpKeys:Array<FlxKey> = [FlxKey.NUMPADPLUS, FlxKey.PLUS];
 	static var initialized:Bool = false;
 
 	override public function create():Void
