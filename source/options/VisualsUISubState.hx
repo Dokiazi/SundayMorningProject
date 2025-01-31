@@ -34,9 +34,9 @@ class VisualsUISubState extends BaseOptionsMenu
 		title = 'Visuals and UI';
 		rpcTitle = 'Visuals & UI Settings Menu'; //for Discord Rich Presence
 
-		var option:Option = new Option('Note Splashes',
-			"If unchecked, hitting \"Sick!\" notes won't show particles.",
-			'noteSplashes',
+		var option:Option = new Option('Old Week 1 BG',
+			"Enables the Old bg file on week 1.",
+			'oldweek1bg',
 			'bool',
 			true);
 		addOption(option);
