@@ -1118,7 +1118,7 @@ class PlayState extends MusicBeatState
 		ScoreText = new FlxText(healthBarBG.x + healthBarBG.width - 190, healthBarBG.y + 30, 0, "", 20);
 		ScoreText.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		ScoreText.scrollFactor.set();
-		botplayTxt.borderSize = 1.25;
+		ScoreText.borderSize = 1.25;
 		add(ScoreText);
 
 		botplayTxt = new FlxText(400, healthBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
@@ -1475,6 +1475,8 @@ class PlayState extends MusicBeatState
 	}
 
 	public function reloadHealthBarColors() {
+		healthBar.createFilledBar(FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]),
+			FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));
 
 		healthBar.updateBar();
 	}
