@@ -39,14 +39,16 @@ import flixel.text.FlxText;
 import lime.app.Application;
 import openfl.Assets;
 
-class TitleState extends MusicBeatState
+import StoryMenuState;
+import OutdatedState;
+import MainMenuState;
+
+class TitleState extends FlxTransitionableState
 {
 	public static var muteKeys:Array<FlxKey> = [FlxKey.ZERO];
 	public static var volumeDownKeys:Array<FlxKey> = [FlxKey.NUMPADMINUS, FlxKey.MINUS];
 	public static var volumeUpKeys:Array<FlxKey> = [FlxKey.NUMPADPLUS, FlxKey.PLUS];
 	static var initialized:Bool = false;
-	var mustUpdate:Bool = false;
-	public static var updateVersion:String = '';
 
 	override public function create():Void
 	{
@@ -65,32 +67,11 @@ class TitleState extends MusicBeatState
 
 			initialized = true;
 
-			#if CHECK_FOR_UPDATES
-			if(ClientPrefs.checkForUpdates && !closedState) {
-			trace('checking for update');
-			var http = new haxe.Http("https://raw.githubusercontent.com/ShadowMario/FNF-PsychEngine/main/gitVersion.txt");
-
-			http.onData = function (data:String)
-			{
-				updateVersion = data.split('\n')[0].trim();
-				var curVersion:String = MainMenuState.psychEngineVersion.trim();
-				trace('version online: ' + updateVersion + ', your version: ' + curVersion);
-				if(updateVersion != curVersion) {
-					trace('versions arent matching!');
-					mustUpdate = true;
-				}
-			}
-
-			http.onError = function (error) {
-				trace('error: $error');
-			}
-
-			http.request();
-		}
-		#end
-
 			FlxTransitionableState.defaultTransIn.tileData = {asset: diamond, width: 32, height: 32};
 			FlxTransitionableState.defaultTransOut.tileData = {asset: diamond, width: 32, height: 32};
+
+			transIn = FlxTransitionableState.defaultTransIn;
+			transOut = FlxTransitionableState.defaultTransOut;
 		}
 
 		persistentUpdate = true;
