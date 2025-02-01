@@ -39,7 +39,7 @@ class OptionsState extends MusicBeatState
 			case 'Background':
 				openSubState(new options.ControlsSubState());
 			case 'Characters':
-				openSubState(new options.CharactersSubState());
+				openSubState(new options.CharactersState());
 		}
 	}
 
