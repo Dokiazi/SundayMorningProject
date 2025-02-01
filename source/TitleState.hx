@@ -45,6 +45,9 @@ class TitleState extends FlxTransitionableState
 	public static var volumeDownKeys:Array<FlxKey> = [FlxKey.NUMPADMINUS, FlxKey.MINUS];
 	public static var volumeUpKeys:Array<FlxKey> = [FlxKey.NUMPADPLUS, FlxKey.PLUS];
 	static var initialized:Bool = false;
+	var mustUpdate:Bool = false;
+	var titleJSON:TitleData;
+	public static var updateVersion:String = '';
 
 	override public function create():Void
 	{
