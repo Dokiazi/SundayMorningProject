@@ -87,7 +87,7 @@ class CreditsState extends MusicBeatState
 			['Engine Contributors'],
 			['Oomu64',				'flicky',			'Gave me ideas and reported bugs',		'https://twitter.com/flicky_i',			'9E29CF'],
 			[''],
-			['Sunday Morning Project Contributors'],
+			['Project Contributors'],
 			['Unfunny guy',		'funnyguy',	'Credit Icons Creator and other things',							'https://twitter.com/ninja_muffin99',	'ISTHAT'],
 			['Generic',		'generic',	'Creator of a... well lets keep it a secret',							'https://twitter.com/ninja_muffin99',	'THEBIT'],
 			['djdestyayayy',		'dotguy',	'idk what he did',							'https://twitter.com/ninja_muffin99',	'OF1987'],
