@@ -22,7 +22,7 @@ import flixel.input.keyboard.FlxKey;
 
 using StringTools;
 
-class MainMenuState extends TitleState
+class MainMenuState extends MusicBeatState
 {
 	public static var oobEngineVersion:String = ' - OoB 0.1.0'; //This is also used for Discord RPC
 	public static var curSelected:Int = 0;
