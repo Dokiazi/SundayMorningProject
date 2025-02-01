@@ -400,13 +400,13 @@ class StoryMenuState extends MusicBeatState
 			bullShit++;
 		}
 
-		bgSprite.visible = true;
-		var assetName:String = leWeek.weekBackground;
-		if(assetName == null || assetName.length < 1) {
-			bgSprite.visible = false;
-		} else {
-			bgSprite.loadGraphic(Paths.image('menubackgrounds/menu_' + assetName));
-		}
+		var weekThing:MenuItem = new MenuItem(0, yellowBG.y + yellowBG.height + 10, i);
+		weekThing.y += ((weekThing.height + 20) * i);
+		weekThing.targetY = i;
+		grpWeekText.add(weekThing);
+
+		weekThing.screenCenter(X);
+		weekThing.antialiasing = ClientPrefs;
 		PlayState.storyWeek = curWeek;
 
 		CoolUtil.difficulties = CoolUtil.defaultDifficulties.copy();
