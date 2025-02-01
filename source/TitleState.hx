@@ -252,9 +252,6 @@ class TitleState extends MusicBeatState
 
 			FlxTransitionableState.defaultTransIn.tileData = {asset: diamond, width: 32, height: 32};
 			FlxTransitionableState.defaultTransOut.tileData = {asset: diamond, width: 32, height: 32};
-
-			transIn = FlxTransitionableState.defaultTransIn;
-			transOut = FlxTransitionableState.defaultTransOut;
 		}
 
 		persistentUpdate = true;
