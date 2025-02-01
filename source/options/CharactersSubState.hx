@@ -39,21 +39,21 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 		//I'd suggest using "Low Quality" as an example for making your own option since it is the simplest here
 		var option:Option = new Option('Proto Girl Friend', //Name
 			'If checked, it toggles between Final gf or proto gf', //Description
-			'lowQuality', //Save data variable name
+			'protogf', //Save data variable name
 			'bool', //Variable type
 			false); //Default value
 		addOption(option);
 
 		var option:Option = new Option('Xmas Pico on week 5', //Name
 			'Toggle between bf xmas or pico xmas.', //Description
-			'lowQuality', //Save data variable name
+			'xmaspico', //Save data variable name
 			'bool', //Variable type
 			false); //Default value
 		addOption(option);
 
 		var option:Option = new Option('Old Bf icon', //Name
 			'If checked Toggles between current bf icon or the yellow one', //Description
-			'lowQuality', //Save data variable name
+			'ogbficon', //Save data variable name
 			'bool', //Variable type
 			false); //Default value
 		addOption(option);
