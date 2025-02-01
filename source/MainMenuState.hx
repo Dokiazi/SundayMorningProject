@@ -22,9 +22,9 @@ import flixel.input.keyboard.FlxKey;
 
 using StringTools;
 
-class MainMenuState extends MusicBeatState
+class MainMenuState extends TitleState
 {
-	public static var oobEngineVersion:String = '- OoB 0.1.0'; //This is also used for Discord RPC
+	public static var oobEngineVersion:String = ' - OoB 0.1.0'; //This is also used for Discord RPC
 	public static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
@@ -36,8 +36,7 @@ class MainMenuState extends MusicBeatState
 		'freeplay',
 		'merch',
 		'options',
-		'credits',
-		'extras'
+		'credits'
 	];
 
 	var magenta:FlxSprite;
@@ -218,8 +217,6 @@ class MainMenuState extends MusicBeatState
 										LoadingState.loadAndSwitchState(new options.OptionsState());
 									case 'credits':
 										MusicBeatState.switchState(new CreditsState());
-									case 'extras':
-										MusicBeatState.switchState(new ExtrasState());
 								}
 							});
 						}

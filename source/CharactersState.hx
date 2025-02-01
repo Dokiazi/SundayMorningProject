@@ -1,4 +1,4 @@
-package options;
+package;
 
 #if desktop
 import Discord.DiscordClient;
@@ -29,7 +29,7 @@ import openfl.Lib;
 
 using StringTools;
 
-class GraphicsSettingsSubState extends BaseOptionsMenu
+class GraphicsSettingsSubState
 {
 	public function new()
 	{
